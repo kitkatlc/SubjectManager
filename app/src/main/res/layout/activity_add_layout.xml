@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg1">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp">
+
+        <EditText
+            android:id="@+id/kebiaoshezhi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:text="课表设置"
+            android:textSize="30dp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="7dp" />
+
+        <EditText
+            android:id="@+id/jichushezhi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="基础设置"
+            android:textSize="25dp"
+            tools:layout_editor_absoluteX="21dp"
+            tools:layout_editor_absoluteY="48dp" />
+
+        <TextView
+            android:id="@+id/dangqianxueqi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="当前学期"
+            android:textSize="25dp"
+            tools:layout_editor_absoluteX="21dp"
+            tools:layout_editor_absoluteY="87dp" />
+
+        <Spinner
+            android:id="@+id/dangqianxueqi1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/danqgianzhoushu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="当前周数"
+            android:textSize="25dp"
+            tools:layout_editor_absoluteX="21dp"
+            tools:layout_editor_absoluteY="136dp" />
+
+        <Spinner
+            android:id="@+id/dangqianzhoushu1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/gexinghuashezhi"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:text="个性化设置"
+            android:textSize="25dp"
+            tools:layout_editor_absoluteX="21dp"
+            tools:layout_editor_absoluteY="185dp" />
+
+        <TextView
+            android:id="@+id/kebiaobeijing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="课表背景"
+            android:textSize="25dp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="246dp" />
+
+        <Spinner
+            android:id="@+id/kebiaobeijing1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Switch
+            android:id="@+id/zhixianshibenhzoukrcheng"
+            android:layout_width="343dp"
+            android:layout_height="wrap_content"
+            android:text="只显示本周课程"
+            android:textSize="25dp"
+            tools:layout_editor_absoluteX="21dp"
+            tools:layout_editor_absoluteY="283dp" />
+    </LinearLayout>
+</LinearLayout>
