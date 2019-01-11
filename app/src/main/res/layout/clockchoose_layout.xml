@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg1"
+    >
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="选择提醒方式"
+        android:textSize="25dp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dp"/>
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="252dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="静音"
+        android:textSize="25dp"
+        android:layout_marginTop="80dp"/>
+
+    <Switch
+        android:id="@+id/switch2"
+        android:layout_width="252dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="震动"
+        android:textSize="25dp"
+        android:layout_marginTop="40dp"/>
+
+    <Switch
+        android:id="@+id/switch3"
+        android:layout_width="252dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="闹铃"
+        android:textSize="25dp"
+        android:layout_marginTop="40dp"/>
+
+    <Switch
+        android:id="@+id/switch4"
+        android:layout_width="252dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="闹铃+震动"
+        android:textSize="25dp"
+        android:layout_marginTop="40dp" />
+
+
+</LinearLayout>
