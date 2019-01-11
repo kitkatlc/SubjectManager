@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg2"
+    tools:layout_editor_absoluteY="81dp">
+
+    <TextView
+        android:id="@+id/TextView"
+        android:layout_width="match_parent"
+        android:layout_height="223dp"
+        android:gravity="center"
+        android:text="Welcome"
+        android:textSize="56sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/EditView1"
+        android:layout_width="384dp"
+        android:layout_height="89dp"
+        android:hint="账号："
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="278dp" />
+
+    <EditText
+        android:id="@+id/EditView2"
+        android:layout_width="384dp"
+        android:layout_height="73dp"
+        android:hint="密码："
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="278dp" />
+
+    <Button
+        android:id="@+id/Button"
+        android:layout_width="wrap_content"
+        android:layout_height="49dp"
+        android:layout_centerInparent="true"
+        android:layout_gravity="center"
+        android:background="#00000000"
+        android:text="登录"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="395dp" />
+</LinearLayout>
