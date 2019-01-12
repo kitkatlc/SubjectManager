@@ -17,30 +17,45 @@
         android:textSize="56sp"
         android:textStyle="bold" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="账号："
+        android:textSize="24sp"/>
     <EditText
-        android:id="@+id/EditView1"
+        android:id="@+id/account"
         android:layout_width="384dp"
         android:layout_height="89dp"
-        android:hint="账号："
         android:textSize="24sp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="278dp" />
-
-    <EditText
-        android:id="@+id/EditView2"
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="密码："
+        android:textSize="24sp"/>
+        <EditText
+        android:id="@+id/password"
         android:layout_width="384dp"
         android:layout_height="73dp"
-        android:hint="密码："
+        android:inputType="textPassword"
         android:textSize="24sp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="278dp" />
+    </LinearLayout>
     <Button
     android:id="@+id/Login"
     android:layout_width="wrap_content"
     android:layout_height="49dp"
-    android:layout_centerInparent="true"
     android:layout_gravity="center"
     android:background="#00000000"
     android:text="登录"
@@ -56,7 +71,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_centerInparent="true"
+
             android:layout_gravity="center_horizontal"
             android:background="#00000000"
             android:text="注册"
@@ -69,7 +84,6 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:layout_centerInparent="true"
             android:layout_gravity="center"
             android:background="#00000000"
             android:text="忘记密码"

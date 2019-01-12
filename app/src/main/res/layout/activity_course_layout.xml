@@ -34,7 +34,7 @@
        android:background="#FFFFFF"
        android:layout_below="@+id/title"
     />
-   <view class="android.support.v7.app.AlertController$RecycleListView"
+   <view class="androidx.appcompat.app.AlertController$RecycleListView"
        android:id="@+id/recycleview"
        android:layout_below="@+id/line"
        android:divider="#FFFFFF"

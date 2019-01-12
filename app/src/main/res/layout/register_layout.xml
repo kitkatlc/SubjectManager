@@ -41,7 +41,7 @@
         android:id="@+id/registe_commit"
         android:layout_width="wrap_content"
         android:layout_height="49dp"
-        android:layout_centerInparent="true"
+
         android:layout_gravity="center"
         android:background="#00000000"
         android:text="注册"
