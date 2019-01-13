@@ -3,11 +3,10 @@ package kitkat.com.subjectmanager.database;
 
 import android.app.Application;
 
-import kitkat.com.subjectmanager.database.dao.StudentDao;
 import kitkat.com.subjectmanager.database.dao.SubjectDao;
-import kitkat.com.subjectmanager.database.table.StudentEntity;
 import kitkat.com.subjectmanager.database.table.SubjectEntity;
-
+import kitkat.com.subjectmanager.database.dao.StudentDao;
+import kitkat.com.subjectmanager.database.table.StudentEntity;
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
@@ -18,7 +17,7 @@ public abstract class AppDatabase extends RoomDatabase {
     /**
      * database name
      */
-    private static final String DB_NAME = "kitkatDatabase";
+    private static final String DB_NAME = "kitkat";
 
     /**
      * 单例
@@ -34,7 +33,7 @@ public abstract class AppDatabase extends RoomDatabase {
         if (sInstance == null) {
             synchronized (AppDatabase.class) {
                 if (sInstance == null) {
-                    sInstance = Room.databaseBuilder(application, AppDatabase.class, DB_NAME).build();
+                    sInstance = Room.databaseBuilder(application, AppDatabase.class, DB_NAME).allowMainThreadQueries().build();
                 }
             }
         }

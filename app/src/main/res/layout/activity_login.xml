@@ -71,7 +71,6 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-
             android:layout_gravity="center_horizontal"
             android:background="#00000000"
             android:text="注册"

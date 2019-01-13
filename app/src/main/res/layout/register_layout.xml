@@ -30,10 +30,10 @@
         android:textStyle="bold"
         />
     <EditText
-        android:id="@+id/registe_question"
+        android:id="@+id/reregiste_password"
         android:layout_width="384dp"
         android:layout_height="73dp"
-        android:hint="您的生日：格式:年.月.日"
+        android:hint="请确认密码:"
         android:textSize="24sp"
         android:textStyle="bold"
         />

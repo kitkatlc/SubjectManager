@@ -8,54 +8,44 @@ import androidx.room.PrimaryKey;
 public class StudentEntity {
 
     @PrimaryKey(autoGenerate = true)
-    public long id;
+    public Long id;
 
-    @ColumnInfo(name = "account")
-    public String account;
-
-    @ColumnInfo(name = "password")
+    @ColumnInfo
     public String password;
 
-    @ColumnInfo(name = "sname")
-    public String sname;
+    @ColumnInfo
+    public String account;
 
-    public String getAccount() {
-        return account;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getPassword() {
         return password;
     }
 
-    public String getSname() {
-        return sname;
-    }
-
-    public void setSname(String sname) {
-        this.sname = sname;
-    }
-
     public void setPassword(String password) {
         this.password = password;
     }
 
+    public String getAccount() {
+        return account;
+    }
     public void setAccount(String account) {
-
         this.account = account;
     }
 
-    public long getId() {
-        return id;
-
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public StudentEntity(String account, String password, String sname) {
-        this.account = account;
+    public StudentEntity(String account, String password) {
+        this.account =account;
         this.password = password;
-        this.sname = sname;
     }
+
+
+
+
 }
