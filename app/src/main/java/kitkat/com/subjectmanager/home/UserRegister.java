@@ -2,6 +2,7 @@ package kitkat.com.subjectmanager.home;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.view.View;
@@ -21,6 +22,7 @@ public class UserRegister extends Activity {
     private EditText register_passwd;
     private EditText reregister_passwd;
     private Button register_submit;
+    SubjectDatabaseHelper dpHelper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // TODO Auto-generated method stub
@@ -88,6 +90,10 @@ public class UserRegister extends Activity {
                 //增加
                 dao.add(entity);
                Toast.makeText(UserRegister.this,"恭喜你，注册成功",Toast.LENGTH_SHORT).show();
+                dpHelper=new SubjectDatabaseHelper(UserRegister.this,"BookStore.db",null,1);
+                SQLiteDatabase db=dpHelper.getWritableDatabase();
+                String sql="create table "+register_username.getText().toString()+"(course_name text ,course_num text,note text)";
+                db.execSQL(sql);
                Intent intent=new Intent(UserRegister.this,LoginActivity.class);
                startActivity(intent);
 //                Boolean isRegister = dao.add(entity);

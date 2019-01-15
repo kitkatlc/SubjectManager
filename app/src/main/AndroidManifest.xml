@@ -2,27 +2,39 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="kitkat.com.subjectmanager">
 
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
     <application
         android:name=".app.App"
         android:allowBackup="true"
-        android:icon="@mipmap/logo2"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/logo2"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        >
+        android:theme="@style/AppTheme">
         <activity android:name=".home.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".home.UserRegister">
+        <activity android:name=".home.UserRegister"></activity>
+        <activity android:name=".home.SubjectActivity"></activity>
+        <activity android:name=".home.ClockchooseActivity"></activity>
 
-        </activity>
-        <activity android:name=".home.SubjectActivity">
-        </activity>
+        <receiver
+            android:name=".home.SubjectClockReceiver"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="kitkat.com.subjectmanager.action.alarm" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".home.DetialActivity"></activity>
+        <activity android:name=".home.AddSubjectActivity"></activity>
     </application>
 
 </manifest>

@@ -3,7 +3,6 @@ package kitkat.com.subjectmanager.database;
 
 import android.app.Application;
 
-import kitkat.com.subjectmanager.database.dao.SubjectDao;
 import kitkat.com.subjectmanager.database.table.SubjectEntity;
 import kitkat.com.subjectmanager.database.dao.StudentDao;
 import kitkat.com.subjectmanager.database.table.StudentEntity;
@@ -12,7 +11,7 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
 
-@Database(entities = {SubjectEntity.class,StudentEntity.class}, version = 1)
+@Database(entities = {StudentEntity.class}, version = 1,exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
     /**
      * database name
@@ -58,7 +57,7 @@ public abstract class AppDatabase extends RoomDatabase {
      *
      * @return SubjectDao实例
      */
-    public abstract SubjectDao getSubjectDao();
+//    public abstract SubjectDao getSubjectDao();
     public abstract StudentDao getStudentDao();
 
 }

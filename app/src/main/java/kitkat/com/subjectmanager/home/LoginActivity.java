@@ -23,9 +23,9 @@ import kitkat.com.subjectmanager.database.table.StudentEntity;
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
     private EditText accountEdit;
     private EditText passwordEdit;
-    private CheckBox rememberPassword;
     private StudentDao studentDao = AppDatabase.getInstance().getStudentDao();
     private SharedPreferences pref;
+    private CheckBox rememberPassword;
     private SharedPreferences.Editor editor;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -39,7 +39,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         pref = PreferenceManager.getDefaultSharedPreferences(this);
         Boolean isRemember = pref.getBoolean("remember_password",false);
         login.setOnClickListener(this);
-        register.setOnClickListener(this);
+       register.setOnClickListener(this);
         if(isRemember){
             String account = pref.getString("account","");
             String password = pref.getString("password","");
@@ -47,6 +47,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             passwordEdit.setText(password);
             rememberPassword.setChecked(true);
         }
+
     }
     @Override
     public void onClick(View v) {
@@ -63,8 +64,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
     public void Login(){
-        String account = accountEdit.getText().toString().trim();
-        String password = passwordEdit.getText().toString().trim();
+        String account = accountEdit.getText().toString();
+        String password = passwordEdit.getText().toString();
         pref=PreferenceManager.getDefaultSharedPreferences(this);
         editor=pref.edit();
         if(rememberPassword.isChecked()){
@@ -75,7 +76,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             editor.clear();
         }
         editor.apply();
-
         if(!TextUtils.isEmpty(account) && !TextUtils.isEmpty(password)) {
             List<StudentEntity> allStudent = studentDao.getAll();
 //            if (allStudent == null) {
@@ -97,6 +97,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             if (match) {
                 Toast.makeText(this, "登录成功", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(this, SubjectActivity.class);
+                intent.putExtra("ACCOUNTNAME",account);
                 startActivity(intent);
                 finish();
             } else {

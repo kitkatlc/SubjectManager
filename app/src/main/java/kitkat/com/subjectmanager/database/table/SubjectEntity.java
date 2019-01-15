@@ -4,16 +4,51 @@ import java.util.Date;
 
 public class SubjectEntity {
     int weekday;
+    String coursenum;
     String coursename;
     Date startweek;
     Date  endweek;
     String room;
+    int year1;
+    int month1;
+    int day1;
     int lesson;
     int year;
     int month;
     int day;
     String WEEK;
 
+    public void setCoursenum(String coursenum) {
+        this.coursenum = coursenum;
+    }
+
+    public String getCoursenum() {
+        return coursenum;
+    }
+
+    public void setYear1(int year1) {
+        this.year1 = year1;
+    }
+
+    public int getYear1() {
+        return year1;
+    }
+
+    public void setMonth1(int month1) {
+        this.month1 = month1;
+    }
+
+    public int getMonth1() {
+        return month1;
+    }
+
+    public void setDay1(int day1) {
+        this.day1 = day1;
+    }
+
+    public int getDay1() {
+        return day1;
+    }
     public void setWEEK(String WEEK) {
         this.WEEK = WEEK;
     }
