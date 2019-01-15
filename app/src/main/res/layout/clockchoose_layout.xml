@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="选择提醒方式"
-        android:textSize="25dp"
+        android:textSize="35sp"
         android:gravity="center_horizontal"
         android:layout_marginTop="10dp"/>
 
@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="静音"
-        android:textSize="25dp"
+        android:textSize="30sp"
         android:layout_marginTop="80dp"/>
 
     <Switch
@@ -31,8 +31,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="震动"
-        android:textSize="25dp"
-        android:layout_marginTop="40dp"/>
+        android:textSize="30sp"
+        android:layout_marginTop="20dp"/>
 
     <Switch
         android:id="@+id/switch3"
@@ -40,8 +40,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="闹铃"
-        android:textSize="25dp"
-        android:layout_marginTop="40dp"/>
+        android:textSize="30sp"
+        android:layout_marginTop="20dp"/>
 
     <Switch
         android:id="@+id/switch4"
@@ -49,8 +49,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="闹铃+震动"
-        android:textSize="25dp"
-        android:layout_marginTop="40dp" />
+        android:textSize="30sp"
+        android:layout_marginTop="20dp" />
 
 
 </LinearLayout>
